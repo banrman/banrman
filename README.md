@@ -10,11 +10,17 @@
   - Health Tracker --> Connect to FitBit?
   - Hidden Game
   - Livestream Embed --> Who Am I watching. If I'm not online
+  - Spotify Integration
+  - Blog
+  - Who Ami I
+  - Site Stats
+
 - Projects
   - Banrmani --> ChatGPT Siri Replacement
-  - 
+  - Discord
 - Bad Advice Corner
 - Homies (Plugs/Shills)
+
 
 ##### Features
 - Day/Night Mode
