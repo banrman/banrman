@@ -2,7 +2,24 @@
 ## Website Link
 [banrman.github.io/banrman](banrman.github.io/banrman) 
 
-#### Other Changes
+### Expected Changes
+
+##### Pages
+- Landing Page
+  - What am I listening to?
+  - Health Tracker --> Connect to FitBit?
+  - Hidden Game
+  - Livestream Embed --> Who Am I watching. If I'm not online
+- Projects
+  - Banrmani --> ChatGPT Siri Replacement
+  - 
+- Bad Advice Corner
+- Homies (Plugs/Shills)
+
+##### Features
+- Day/Night Mode
+  - Adventure Time Theme?
+
 
 
 
