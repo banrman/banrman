@@ -14,18 +14,20 @@
   - Blog
   - Who Ami I
   - Site Stats
-
+  
 - Projects
   - Banrmani --> ChatGPT Siri Replacement
   - Discord
 - Bad Advice Corner
 - Homies (Plugs/Shills)
-
+- Wares
 
 ##### Features
 - Day/Night Mode
   - Adventure Time Theme?
-
+- RealTime Weather
+  - Default to New York, NY.
+  - Location Configurable
 
 
 
