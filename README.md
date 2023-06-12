@@ -14,6 +14,8 @@
   - Blog
   - Who Ami I
   - Site Stats
+  - Secret Password Required
+  - CRT Home with different channels through TV Guide
   
 - Projects
   - Banrmani --> ChatGPT Siri Replacement

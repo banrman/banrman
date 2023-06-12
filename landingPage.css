@@ -1,32 +1,64 @@
-html {
-    margin: 0;
-    min-height: 100%;
+@keyframes slideIn {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+#passwordForm{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.animated {
+    animation: slideIn 1s ease-in-out;
+}
+
+.rounded-rectangle {
+    position: absolute;
+    width: 750px;
+    height: 600px;
+    background-color: #000000;
+    border-radius: 10px;
+    left: 360px;
+    top: 150px;
 }
 
 body {
-    margin: 0;
+    background-image: url("resources/CRTgreen.png");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
-#background {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    top: 0;
-    left: 0;
-    filter: brightness(1.2);
-    z-index: -2;
+.retro-text {
+    font-family: 'Courier New', monospace;
+    font-size: 24px;
+    color: #FFD700;
+    text-shadow: 2px 2px 4px #000;
 }
 
-.backgroundContainer {
-    padding: 25px;
-    background-color: white;
-    color: black;
-    font-size: 25px;
-}
+/* Retro Button Styles */
+.retro-button {
+    display: inline-block;
+    background-color: #009dff;
+    color: #000;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
   
-.dark-mode {
-    background-color: black;
-    color: white;
-}
-  
+  .retro-button:hover {
+    background-color: #FFC107;
+    cursor: pointer;
+  }
