@@ -14,3 +14,9 @@ function checkPassword() {
             // Remove the loading screen once the game is loaded
             document.getElementById('loading-screen').style.display = 'none';
         }, 3000);
+
+
+        window.addEventListener('DOMContentLoaded', () => {
+            const audio = document.getElementById('bg-music');
+            audio.play();
+          });

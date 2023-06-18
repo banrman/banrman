@@ -73,3 +73,9 @@
     width: 100%;
     position: absolute;
 }
+
+#audio-player {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
