@@ -66,3 +66,95 @@ function checkPassword() {
           // Initial quote rotation
           rotateQuotes();
         });
+
+        /*Chat Scripts */
+
+        document.addEventListener('DOMContentLoaded', function() {
+          const chatLog = document.getElementById('chat-log');
+          const messageInput = document.getElementById('message-input');
+          const sendButton = document.getElementById('send-button');
+          const clearButton = document.getElementById('clear-button');
+    
+          let username = getRandomAnimeName(); // Initialize username with a random anime name
+    
+          // Load chat messages and username from local storage on page load
+          const savedMessages = localStorage.getItem('chatMessages');
+          if (savedMessages) {
+            chatLog.innerHTML = savedMessages;
+          }
+          const savedUsername = localStorage.getItem('chatUsername');
+          if (savedUsername) {
+            username = savedUsername;
+          }
+    
+          sendButton.addEventListener('click', sendMessage);
+          messageInput.addEventListener('keydown', function(event) {
+            if (event.keyCode === 13) {
+              sendMessage();
+            }
+          });
+    
+          clearButton.addEventListener('click', clearMessagesFromLocalStorage);
+    
+          function sendMessage() {
+            const message = messageInput.value;
+            if (message.startsWith('/user ')) {
+              // If the message starts with '/user ', update the username
+              const newUsername = message.substr(6);
+              setUsername(newUsername);
+            } else {
+              displayMessage(username, message);
+              saveMessagesToLocalStorage(); // Save chat messages to local storage
+            }
+            messageInput.value = '';
+          }
+    
+          function displayMessage(username, message) {
+            const messageElement = document.createElement('div');
+            messageElement.textContent = username + ': ' + message;
+            chatLog.appendChild(messageElement);
+            chatLog.scrollTop = chatLog.scrollHeight;
+          }
+    
+          function saveMessagesToLocalStorage() {
+            localStorage.setItem('chatMessages', chatLog.innerHTML);
+            localStorage.setItem('chatUsername', username);
+          }
+    
+          function setUsername(newUsername) {
+            username = newUsername;
+            displayMessage('System', 'Username changed to: ' + username);
+            saveMessagesToLocalStorage(); // Save the updated username to local storage
+          }
+    
+          function getRandomAnimeName() {
+            // Array of random anime character names
+            const animeNames = [
+              'Naruto',
+              'Goku',
+              'Sailor Moon',
+              'Luffy',
+              'Ichigo',
+              'Light Yagami',
+              'Spike Spiegel',
+              'Levi Ackerman',
+              'Eren Yeager',
+              'Mikasa Ackerman'
+            ];
+    
+            // Generate a random index to select a name from the array
+            const randomIndex = Math.floor(Math.random() * animeNames.length);
+            return animeNames[randomIndex];
+          }
+        });
+
+
+        /* Global Functions */
+            // Declare clearMessagesFromLocalStorage as a global function
+    window.clearMessagesFromLocalStorage = function() {
+      const chatLog = document.getElementById('chat-log');
+      chatLog.innerHTML = '';
+      localStorage.removeItem('chatMessages');
+      console.log('Chat messages cleared from the local storage');
+    };
+        

@@ -6,6 +6,7 @@
     <title>BDUBS</title>
     <script src="script.js"></script>
     <link href = "content.css" rel = "stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -49,6 +50,16 @@
           </li>
         </ul>
         <input type="range" id="volume-slider" min="0" max="1" step="0.1" value="0.5">
+      </div>
+
+      <div id="quests-popup" style="display: none;"></div>
+
+      <div id="chat-container">
+        <div id="chat-log"></div>
+        <div id="chat-input">
+          <input type="text" id="message-input" placeholder="/user to define a nickname...">
+          <button id="send-button">Send</button>
+        </div>
       </div>
 
     <audio id="bg-music" loop>
