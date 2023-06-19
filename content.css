@@ -65,13 +65,70 @@
     overflow: clip;
 }
 
-#bg {
+.shovelknight-container {
   z-index: -999;
   background-size: cover;
   image-rendering: pixelated;
   background-color: #000;
   width: 100%;
+  top:0;
+  left:0;
+  position: relative;
+}
+
+.shovelknight{
+  z-index: -999;
+  background-size: cover;
+  image-rendering: pixelated;
+  background-color: #000;
+  width: 100%;
+  top:0;
+  left:0;
+  position: relative;
+}
+
+/* Speech Bubble */
+.speech-bubble {
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15%;
+  text-align: center;
+  top:48%;
+  left:38%;
+  animation: speech-bubble-animation 30s infinite;
+}
+
+#quote-text {
+  font-family: "Courier New", monospace; /* Retro-style font */
+  font-size: 70%;
+  color: #000000; /* Retro-style text color */
+  position: absolute;
+  top: 24%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+}
+
+@media (min-width: 1280px) {
+
+  #quote-text {
+    font-size: 1.2rem; /* Adjust the font size for smaller screens */
+  }
+}
+
+@media (min-width: 2560px) {
+
+  #quote-text {
+    font-size: 2rem; /* Adjust the font size for smaller screens */
+  }
+}
+
+.speech-bubble img {
+  width: 100%;
+  height: auto;
+  image-rendering: pixelated;
 }
 
 #bg2 {
@@ -80,8 +137,7 @@
   image-rendering: pixelated;
   background-color: #000;
   width: 100%;
-  position: absolute;
-  top: 1000px;
+  position: relative;
 }
 
 /*bg music block */
@@ -128,18 +184,7 @@
   image-rendering: crisp-edges;
 }
 
-/* Speech Bubble */
-.speech-bubble {
-  z-index: -999;
-  position: absolute;
-  display: none;
-  width: 200px;
-  height: 120px;
-  text-align: center;
-  animation: speech-bubble-animation 30s infinite;
-  left: 650px;
-  top: 550px;
-}
+
 
 @keyframes speech-bubble-animation {
   0%, 90%, 100% {
@@ -150,22 +195,7 @@
   }
 }
 
-#quote-text {
-  font-family: "Courier New", monospace; /* Retro-style font */
-  font-size: 16px, bold;
-  color: #000000; /* Retro-style text color */
-  position: absolute;
-  top: 20%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 80%;
-}
 
-.speech-bubble img {
-  width: 100%;
-  height: auto;
-  image-rendering: pixelated;
-}
 
 
 .menu-bar {
