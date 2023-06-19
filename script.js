@@ -148,7 +148,33 @@ function checkPassword() {
           }
         });
 
+        /* Quests */
+  document.addEventListener('DOMContentLoaded', function() {
+    const loadReadmeLink = document.getElementById('load-readme');
+    const readmeContent = document.getElementById('readme-content');
+    const markdownParser = new markdownit();
+    let isReadmeVisible = false;
 
+    loadReadmeLink.addEventListener('click', function(event) {
+      event.preventDefault();
+      isReadmeVisible = !isReadmeVisible; // Toggle visibility
+
+      if (isReadmeVisible) {
+        fetch('README.md')
+          .then(response => response.text())
+          .then(data => {
+            const html = markdownParser.render(data);
+            readmeContent.innerHTML = '<div class="markdown-body">' + html + '</div>';
+            readmeContent.style.display = 'block';
+          })
+          .catch(error => {
+            console.log('Error fetching README.md:', error);
+          });
+      } else {
+        readmeContent.style.display = 'none';
+      }
+    });
+  });
         /* Global Functions */
             // Declare clearMessagesFromLocalStorage as a global function
     window.clearMessagesFromLocalStorage = function() {
