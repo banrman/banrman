@@ -8,7 +8,13 @@
     <link href = "content.css" rel = "stylesheet">
 </head>
 <body>
-    <img src="resources/shovelknight.gif" id="bg">
+    <div>
+        <img src="resources/shovelknight.gif" id="bg">
+        <div class="speech-bubble">
+            <img src="resources/speechbubble.png" alt="Speech Bubble">
+            <p id="quote-text"></p>
+        </div>
+    </div>
     <div id="loading-screen">
         <div>
         <p id="loading-message">Loading...</p>
@@ -16,10 +22,16 @@
         <div class="loading-bar"></div>
     </div>
     
+    <div class="speech-bubble">
+        <img src="resources/speechbubble.png" alt="Speech Bubble">
+        <p id="quote-text"></p>
+    </div>
+
     <audio id="bg-music" loop>
         <source src="resources/LofiAttempt2NoGuitar.mp3" type="audio/mp3">
         Your browser does not support the audio element.
     </audio> 
+    <input type="range" id="volume-slider" min="0" max="1" step="0.1" value="0.5">
 
 </body>
 </html>
