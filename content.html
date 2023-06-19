@@ -8,6 +8,14 @@
     <link href = "content.css" rel = "stylesheet">
 </head>
 <body>
+
+    <!-- <div id="loading-screen">
+        <div>
+        <p id="loading-message">Loading...</p>
+     </div>
+        <div class="loading-bar"></div>
+    </div> -->
+
     <div>
         <img src="resources/shovelknight.gif" id="bg">
         <div class="speech-bubble">
@@ -15,23 +23,38 @@
             <p id="quote-text"></p>
         </div>
     </div>
-    <div id="loading-screen">
-        <div>
-        <p id="loading-message">Loading...</p>
-     </div>
-        <div class="loading-bar"></div>
+
+    <div>
+        <img src="resources/bg.png" id="bg2">
     </div>
-    
-    <div class="speech-bubble">
-        <img src="resources/speechbubble.png" alt="Speech Bubble">
-        <p id="quote-text"></p>
-    </div>
+
+    <div class="menu-bar">
+        <ul class="menu-list">
+          <li class="menu-item">Inventory</li>
+          <li class="menu-item skills">Skills
+            <ul class="sub-menu">
+              <li class="sub-menu-item">Spell 1</li>
+              <li class="sub-menu-item">Spell 2</li>
+              <li class="sub-menu-item">Spell 3</li>
+            </ul>
+          </li>
+          <li class="menu-item quests">Quests
+            <ul class="sub-menu">
+              <li class="sub-menu-item">Quest 1</li>
+              <li class="sub-menu-item">Quest 2</li>
+              <li class="sub-menu-item">Quest 3</li>
+            </ul>
+          </li>
+        </ul>
+        <input type="range" id="volume-slider" min="0" max="1" step="0.1" value="0.5">
+      </div>
 
     <audio id="bg-music" loop>
         <source src="resources/LofiAttempt2NoGuitar.mp3" type="audio/mp3">
         Your browser does not support the audio element.
     </audio> 
-    <input type="range" id="volume-slider" min="0" max="1" step="0.1" value="0.5">
+
+
 
 </body>
 </html>

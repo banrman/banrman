@@ -74,6 +74,16 @@
   position: absolute;
 }
 
+#bg2 {
+  z-index: -999;
+  background-size: cover;
+  image-rendering: pixelated;
+  background-color: #000;
+  width: 100%;
+  position: absolute;
+  top: 1000px;
+}
+
 /*bg music block */
 
 #audio-player {
@@ -157,3 +167,54 @@
   image-rendering: pixelated;
 }
 
+
+.menu-bar {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #000;
+  border: 2px solid #f00;
+  border-radius: 8px;
+  padding: 8px;
+  width: 200px;
+  font-family: "Courier New", monospace;
+  font-size: 16px;
+}
+
+.menu-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-item {
+  background-color: #444;
+  color: #fff;
+  padding: 8px;
+  margin-bottom: 4px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.menu-item:hover {
+  background-color: #666;
+}
+
+.sub-menu {
+  display: none;
+  margin-top: 4px;
+  padding: 0;
+}
+
+.sub-menu-item {
+  background-color: #666;
+  color: #fff;
+  padding: 8px;
+  margin-bottom: 4px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.sub-menu-item:hover {
+  background-color: #888;
+}

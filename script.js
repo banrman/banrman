@@ -36,6 +36,13 @@ function checkPassword() {
             "Am I forgetting something...",
             "Time to reread One Piece..."
           ];
+
+          const skillsMenuItem = document.querySelector('.menu-item.skills');
+          const skillsSubMenu = document.querySelector('.skills .sub-menu');
+
+          skillsMenuItem.addEventListener('click', function() {
+            skillsSubMenu.classList.toggle('show');
+          });
           
           let currentQuoteIndex = 0;
 
